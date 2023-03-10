@@ -1,0 +1,12 @@
+diff --git a/node_modules/lodash/add.js b/node_modules/lodash/add.js
+index f069515..2be96bb 100644
+--- a/node_modules/lodash/add.js
++++ b/node_modules/lodash/add.js
+@@ -16,6 +16,7 @@ var createMathOperation = require('./_createMathOperation');
+  * // => 10
+  */
+ var add = createMathOperation(function(augend, addend) {
++  console.log(123);
+   return augend + addend;
+ }, 0);
+ 
