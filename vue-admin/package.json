@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --mode development",
-    "serve": "vite --mode development",
+    "serve": "vite --mode production",
     "build": "vite build --mode production",
     "preview": "vite preview --port 3000",
     "start": "yarn && vite --mode development",

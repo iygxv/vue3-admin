@@ -12,9 +12,16 @@ export default defineConfig({
   },
   base:'./',
   server: {
-    port: 3000,
+    port: 5555,
     host: '0.0.0.0', // 配置ip 可以本地ip访问到项目
-    open: true
+    open: true,
+    // proxy: {
+    //   '': {
+    //     target: 'http://114.116.29.38:8089',
+    //     changeOrigin: true,
+    //     // rewrite: (path) => path.replace(/^\/api/, '')
+    //  },
+    // }
   }, 
   build: {
     sourcemap: false
