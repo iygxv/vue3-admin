@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --mode development",
-    "serve": "vite --mode production",
-    "build": "vite build",
+    "serve": "vite --mode development",
+    "build": "vite build --mode production",
     "preview": "vite preview --port 3000",
-    "start": "yarn && vite --mode production",
+    "start": "yarn && vite --mode development",
     "postinstall": "patch-package"
   },
   "dependencies": {

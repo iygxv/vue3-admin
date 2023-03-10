@@ -9,9 +9,10 @@ import { ElMessage } from 'element-plus'
 
 // const userStore = useUserStore()
 // const router = useRouter()
-// console.log(router);
 
 // 根据环境不同引入不同api地址
+
+console.log(import.meta.env.VITE_BASE_API);
 
 const service = axios.create({
   baseURL: import.meta.env.VITE_BASE_API, // url = base url + request url

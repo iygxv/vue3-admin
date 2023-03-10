@@ -58,8 +58,6 @@ export const usePermissionStore: StoreDefinition = defineStore({
           roles = row // 获取到所有角色
         }
         if (code1 === 200) {
-          console.log(roles);
-          
           // 获取到当前角色 的菜单id
           const [ roleInfo ] = roles.filter((role: any) => role.role_char === role_char)
           

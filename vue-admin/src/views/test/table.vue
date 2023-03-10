@@ -62,7 +62,6 @@ const tableColumns = reactive<columnsProp[]>([
   }
 ])
 const getList = (val: number) => {
-  console.log(val);
 }
 </script>
 

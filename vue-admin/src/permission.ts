@@ -21,32 +21,24 @@ const genRoutes = () => {
   // 动态路由addRoute
   for (let i = 0; i < menus.length; i++) {
     let item = menus[i]
-    
     if (item.isRedirect && item.children) {
-      // newRoute.children?.push({
-      //   path: item.path,
-      //   name: item.name,
-      //   redirect: item.children[0].path,
-      //   meta: { title: item.title },
-      // })
       // 重定向的不加入进来
       for (let j = 0; j < item.children.length; j++) {
         let child = item.children[j]
-        let modules = import.meta.glob('../views/*.vue')
+        let modules = import.meta.glob('../**/*.vue')
         newRoute.children?.push({
           path: child.path,
           name: child.name,
-          component: modules[`./views/${child.com_path}.vue`],
+          component: modules[`./views${child.com_path}.vue`],
           meta: { title: child.title },
         })
       }
     } else {
-      let modules = import.meta.glob('../views/index.vue')
-      console.log( modules);
+      let modules = import.meta.glob('../**/*.vue')
       newRoute.children?.push({
         path: item.path,
         name: item.name,
-        component: modules[`./views/${menus[i].com_path}/index.vue`],
+        component: modules[`./views${menus[i].com_path}/index.vue`],
         meta: { title: item.title },
       })
     }

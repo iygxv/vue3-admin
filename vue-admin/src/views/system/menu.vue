@@ -375,9 +375,9 @@ const getIcon = () => {
   state.icons = _icons
 }
 const radioChange = (type: any) => {
-  if(type === '2') {
+  if (type === '2') {
     addEditUserDialog.model.parent_id = ''
-  }else {
+  } else {
     addEditUserDialog.model.parent_id = 0
   }
 }
